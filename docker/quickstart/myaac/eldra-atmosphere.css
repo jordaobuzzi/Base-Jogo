@@ -1,0 +1,134 @@
+/* Eldra: public-site atmosphere layer. Keep image-based labels and controls intact. */
+body[data-eldra-atmosphere="1"] {
+  --eldra-bg: #090f12;
+  --eldra-surface: #142026;
+  --eldra-raised: #1d2b30;
+  --eldra-text: #e0ddd2;
+  --eldra-muted: #adbbb8;
+  --eldra-gold: #d4b780;
+  --eldra-line: #76664b;
+  color: var(--eldra-text);
+  background: radial-gradient(ellipse at 50% 0, #20463f66, transparent 58%),
+    linear-gradient(180deg, #101c20, var(--eldra-bg) 800px);
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.65;
+}
+body[data-eldra-atmosphere="1"] ::selection { background: #426c60; color: #fff4da; }
+body[data-eldra-atmosphere="1"] :is(a, button, input, select, textarea):focus-visible {
+  outline: 2px solid #9cdbbf;
+  outline-offset: 3px;
+}
+body[data-eldra-atmosphere="1"] a { color: var(--eldra-gold); }
+body[data-eldra-atmosphere="1"] a:hover { color: #f0dcaf; }
+body[data-eldra-atmosphere="1"] :is(h1, h2, h3) {
+  color: #e1cba4;
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  line-height: 1.25;
+}
+body[data-eldra-atmosphere="1"] :is(.BoxContent, #content) {
+  color: var(--eldra-text);
+  background: linear-gradient(125deg, #18262a, #101c21) !important;
+}
+body[data-eldra-atmosphere="1"] #content {
+  border: 1px solid var(--eldra-line);
+  box-shadow: inset 0 1px #d3bc8514, 0 16px 36px #0005;
+}
+body[data-eldra-atmosphere="1"] .BoxContent {
+  border-color: var(--eldra-line);
+  line-height: 1.7;
+}
+body[data-eldra-atmosphere="1"] :is(.Border_2, .Border_3) {
+  border-color: #6e624b;
+  background-color: #101c21;
+}
+body[data-eldra-atmosphere="1"] :is(.TableContainer, .TableContentContainer) {
+  color: var(--eldra-text);
+  border-color: var(--eldra-line) !important;
+  background: var(--eldra-surface) !important;
+}
+body[data-eldra-atmosphere="1"] :is(.Table1, .Table2, .Table3, .Table4, .Table5) {
+  color: var(--eldra-text);
+  background-color: var(--eldra-surface) !important;
+  border-color: var(--eldra-line) !important;
+}
+body[data-eldra-atmosphere="1"] :is(.Odd, .Even, .moduleRow, .moduleRowOver) {
+  color: var(--eldra-text);
+  background-color: #17252a !important;
+}
+body[data-eldra-atmosphere="1"] :is(.Even, .moduleRowOver) {
+  background-color: #1e3033 !important;
+}
+body[data-eldra-atmosphere="1"] :is(.TableContent, .InnerTableContainer) td {
+  border-color: #53625b !important;
+}
+body[data-eldra-atmosphere="1"] :is(.CaptionContainer, .CaptionInnerContainer, .LabelH, .LabelH td) {
+  color: #e2cca4 !important;
+  background: linear-gradient(90deg, #35403a, #22332f) !important;
+}
+body[data-eldra-atmosphere="1"] .CaptionContainer .Text { color: #f0dfbb; }
+body[data-eldra-atmosphere="1"] :is(.NewsHeadlineBackground, .BorderTitleText) {
+  background: linear-gradient(90deg, #35403a, #23342f) !important;
+  border-color: var(--eldra-line);
+}
+body[data-eldra-atmosphere="1"] :is(.NewsHeadlineText, .NewsHeadlineDate, .NewsHeadlineAuthor) {
+  color: #f1dfbb !important;
+}
+body[data-eldra-atmosphere="1"] :is(.NewsTickerText, .NewsTickerShortText, .NewsTickerFullText) {
+  color: var(--eldra-text);
+}
+body[data-eldra-atmosphere="1"] :is(#tabs, #mainsubmenu) {
+  background: linear-gradient(#2b3833, #172721);
+  border-color: var(--eldra-line);
+}
+body[data-eldra-atmosphere="1"] #tabs :is(.tab, .tab-active) {
+  background: linear-gradient(#3c4638, #24362b);
+  color: #ead5a8;
+}
+body[data-eldra-atmosphere="1"] #mainsubmenu a { color: #ead5a8; }
+body[data-eldra-atmosphere="1"] .Submenuitem {
+  background-color: #142a25 !important;
+  color: #d6dccc;
+}
+body[data-eldra-atmosphere="1"] .Submenuitem:hover {
+  background-color: #2a4437 !important;
+}
+body[data-eldra-atmosphere="1"] .SubmenuitemLabel { color: #d6dccc; }
+body[data-eldra-atmosphere="1"] :is(#Footer, #copyrights) { color: var(--eldra-muted); }
+body[data-eldra-atmosphere="1"] hr { border-color: #76664b88; }
+body[data-eldra-atmosphere="1"] :is(input:not([type]), input[type="text"], input[type="email"], input[type="password"], input[type="number"], input[type="search"], select, textarea) {
+  color: #ebe6d8;
+  background: #0d1b1e;
+  border: 1px solid #8b8067;
+  border-radius: 3px;
+  padding: 7px 9px;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+body[data-eldra-atmosphere="1"] input::placeholder,
+body[data-eldra-atmosphere="1"] textarea::placeholder { color: #aab9b3; opacity: 1; }
+body[data-eldra-atmosphere="1"] :is(input[type="checkbox"], input[type="radio"]) { accent-color: #82ad94; }
+body[data-eldra-atmosphere="1"] :is(input[type="submit"], input[type="button"]) {
+  color: #17251e;
+  background: linear-gradient(#ddc595, #b3935a);
+  border: 1px solid #e5ce9b;
+  border-radius: 3px;
+  padding: 7px 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+body[data-eldra-atmosphere="1"] :is(input[type="submit"], input[type="button"]):hover {
+  background: linear-gradient(#e9d6ad, #c2a064);
+}
+body[data-eldra-atmosphere="1"] :is(input, select, textarea, button):disabled { opacity: .6; cursor: not-allowed; }
+body[data-eldra-atmosphere="1"] .FormFieldError { color: #ffb8ad; }
+body[data-eldra-atmosphere="1"] .SmallBox .ErrorMessage {
+  color: #ffd0c4;
+  background-color: #402a2b;
+}
+body[data-eldra-atmosphere="1"] .SmallBox .Message {
+  color: #d9e8d3;
+  background-color: #223a30;
+}
+/* This pass does not change layouts, imagery, image-button labels, or visibility. */

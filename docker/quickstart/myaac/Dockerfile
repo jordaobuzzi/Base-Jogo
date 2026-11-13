@@ -55,6 +55,11 @@ RUN apt-get update \
 
 COPY --from=builder /var/www/html /var/www/html
 
+COPY quickstart/myaac/eldra-atmosphere.css /var/www/html/templates/eldra-atmosphere.css
+COPY quickstart/myaac/apply-atmosphere.php /usr/local/bin/apply-eldra-atmosphere.php
+RUN php /usr/local/bin/apply-eldra-atmosphere.php \
+	&& rm /usr/local/bin/apply-eldra-atmosphere.php
+
 RUN rm -rf /var/www/html/node_modules \
 	&& chown -R www-data:www-data /var/www/html
 
